@@ -1,0 +1,13 @@
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\bin\Debug\Vending Machine.exe.config
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\bin\Debug\Vending Machine.exe
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\bin\Debug\Vending Machine.pdb
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine.csprojResolveAssemblyReference.cache
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\MainWindow.baml
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\MainWindow.g.cs
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\App.g.cs
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine_MarkupCompile.cache
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine.g.resources
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending_Machine.Properties.Resources.resources
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine.csproj.GenerateResource.Cache
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine.exe
+c:\users\артем\documents\visual studio 2013\Projects\Vending Machine\Vending Machine\obj\Debug\Vending Machine.pdb
