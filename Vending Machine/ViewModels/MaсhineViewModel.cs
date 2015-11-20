@@ -85,6 +85,12 @@ namespace Vending_Machine
                 g.Choosed += TryBuyGoods;
         }
 
+
+        /// <summary>
+        /// Translates money from user's bank to VM vallet
+        /// </summary>
+        /// <param name="sum">How much to translate</param>
+        /// <returns>Returns false if there is not enougth money in bank, else returns true</returns>
         private bool BankToVallet(Int32 sum)
         {
             if (sum > UserBank)
@@ -107,6 +113,11 @@ namespace Vending_Machine
             return true;
         }
 
+
+        /// <summary>
+        /// On goods click callback
+        /// </summary>
+        /// <param name="target">Clicked item</param>
         private void TryBuyGoods(GoodsViewModel target)
         {
             if (!BankToVallet(target.Price))
@@ -118,15 +129,26 @@ namespace Vending_Machine
             MessageBox.Show("Спасибо!");
         }
 
-        public void InsertUserCoin(CoinTypes coinType)
+
+        /// <summary>
+        /// Function for user to insert coin
+        /// </summary>
+        /// <param name="type">Coin type</param>
+        public void InsertUserCoin(CoinTypes type)
         {
-            if (_userBank.Keys.Contains(coinType))
-                _userBank[coinType].AddItems(1);
+            if (_userBank.Keys.Contains(type))
+                _userBank[type].AddItems(1);
             else
-                _userBank.Add(coinType, new CoinsViewModel(coinType, 1));
+                _userBank.Add(type, new CoinsViewModel(type, 1));
             OnPropertyChanged("UserBankString");
         }
 
+
+        /// <summary>
+        /// Counting number of coins of a specific type in VM vallet and user bank
+        /// </summary>
+        /// <param name="type">Coin type</param>
+        /// <returns>Returns number of coins</returns>
         private int SummaryCoinsNumber(CoinTypes type)
         {
             var valletCount = 0;
@@ -138,6 +160,13 @@ namespace Vending_Machine
             return valletCount + bankCount;
         }
 
+
+        /// <summary>
+        /// Tries to return to user a number of coins of a special type
+        /// </summary>
+        /// <param name="type">Coins type</param>
+        /// <param name="count">Needed count</param>
+        /// <returns>Returns false if there is not enougth coins, operation does not perform</returns>
         private bool TryCoinsReturn(CoinTypes type, Int32 count)
         {
             if (SummaryCoinsNumber(type) < count)
@@ -163,6 +192,10 @@ namespace Vending_Machine
             return true;
         }
 
+
+        /// <summary>
+        /// Returns user's money
+        /// </summary>
         private void ReturnMoneyToUser()
         {
             if (User == null) return;
@@ -179,12 +212,21 @@ namespace Vending_Machine
             }
         }
 
+
+        /// <summary>
+        /// Connects user to machine
+        /// </summary>
+        /// <param name="user"></param>
         public void ConnectUser(UserViewModel user)
         {
             if (User == null)
                 User = user;
         }
 
+
+        /// <summary>
+        /// Disconnects user from machine
+        /// </summary>
         public void DisconnectUser()
         {
             if (User == null) return;

@@ -29,6 +29,11 @@ namespace Vending_Machine
                 c.Value.Choosed += InsertCoin;
         }
 
+
+        /// <summary>
+        /// Inserting coin into vending machine
+        /// </summary>
+        /// <param name="coin">Coin type</param>
         private void InsertCoin(CoinsViewModel coin)
         {
             if (coin.TakeItems(1))
@@ -36,6 +41,12 @@ namespace Vending_Machine
             
         }
 
+
+        /// <summary>
+        /// Adding coins to user's vallet
+        /// </summary>
+        /// <param name="type">Coins type</param>
+        /// <param name="count">Number of coins</param>
         public void GiveCoins(CoinTypes type, int count)
         {
             _vallet[type].AddItems(count);
